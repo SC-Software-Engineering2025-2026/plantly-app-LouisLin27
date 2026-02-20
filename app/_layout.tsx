@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import Entypo from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { theme } from "../theme";
