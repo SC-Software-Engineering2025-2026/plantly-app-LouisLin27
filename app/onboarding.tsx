@@ -1,10 +1,11 @@
 import { Text, View, StyleSheet } from "react-native";
-import { theme } from "../theme";
+import { theme } from "@/theme";
 
-export default function ProfileScreen() {
+export default function OnboardingScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Profile</Text>
+      <Text style={styles.text}>Welcome to Plantly</Text>
+      <Text>Track and care for your plants easily.</Text>
     </View>
   );
 }
@@ -18,5 +19,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,
+    fontWeight: "600",
+    marginBottom: 8,
   },
 });

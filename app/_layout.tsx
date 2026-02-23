@@ -1,32 +1,10 @@
-import { Tabs } from "expo-router";
-import { Entypo } from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import { theme } from "../theme";
+import { Stack } from "expo-router";
 
 export default function Layout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: theme.colorGreen }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarShowLabel: false,
-          tabBarIcon: ({ size, color }) => (
-            <Entypo name="leaf" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: "Profile",
-          tabBarShowLabel: false,
-          tabBarIcon: ({ size, color }) => (
-            <Feather name="user" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    <Stack>
+      <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" />
+    </Stack>
   );
 }
