@@ -8,7 +8,7 @@ import { StatusBar } from "expo-status-bar";
 import { PlantlyImage } from "@/components/PlantlyImage";
 
 export default function OnboardingScreen() {
-  const router = useRouter;
+  const router = useRouter();
   const toggleHasOnboarded = useUserStore((state) => state.toggleHadOnboarded);
   const handlePress = () => {
     toggleHasOnboarded();
