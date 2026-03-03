@@ -18,7 +18,7 @@ export default function App() {
       ListEmptyComponent={
         <PlantlyButton
           title="add your first plant"
-          onPress={() => router.navigate("/new")}
+          onPress={() => router.push("/new")}
         />
       }
     />

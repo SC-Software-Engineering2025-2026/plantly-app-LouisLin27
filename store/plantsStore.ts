@@ -18,7 +18,7 @@ type PlantsState = {
     name: string,
     wateringFrequencyDays: number,
     imageUri?: string,
-  ) => Promise<void>;
+  ) => void;
   removePlant: (plantId: string) => void;
   waterPlant: (plantId: string) => void;
 };
