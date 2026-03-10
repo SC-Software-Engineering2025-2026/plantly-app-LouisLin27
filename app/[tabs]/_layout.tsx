@@ -1,18 +1,15 @@
-import { Link, Redirect, Tabs } from "expo-router";
+import { Redirect, SplashScreen, Tabs } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { theme } from "@/theme";
 import { useUserStore } from "@/store/userStore";
-import { AntDesign } from "@expo/vector-icons";
-import { Pressable } from "react-native";
-
-const hasFinishedOnboarding = true;
 
 export default function Layout() {
+  SplashScreen.hideAsync();
   const hasFinishedOnborading = useUserStore(
     (state) => state.hasFinishedOnboarding,
   );
-  if (!hasFinishedOnboarding) {
+  if (!hasFinishedOnborading) {
     return <Redirect href="/onboarding" />;
   }
   return (
